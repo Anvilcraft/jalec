@@ -3,7 +3,7 @@ import org.gradle.api.JavaVersion.VERSION_1_8
 val specTitle = "JAlec"
 val artifact = specTitle.lowercase()
 group = "net.anvilcraft"
-version = "0.1.1"
+version = "0.1.2"
 
 plugins {
     id("java")

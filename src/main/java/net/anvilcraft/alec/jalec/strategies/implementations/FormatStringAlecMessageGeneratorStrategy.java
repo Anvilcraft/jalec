@@ -7,6 +7,9 @@ import net.anvilcraft.alec.jalec.strategies.interfaces.IAlecMessageGeneratorStra
 public class FormatStringAlecMessageGeneratorStrategy implements IAlecMessageGeneratorStrategy {
     @Override
     public String generateAlecMessage(Object... args) {
-        return String.format(args[0].toString(), Arrays.copyOfRange(args, 1, args.length));
+        String msg = String.format(args[0].toString(), Arrays.copyOfRange(args, 1, args.length));
+        if (msg.isEmpty())
+            return null;
+        return msg;
     }
 }

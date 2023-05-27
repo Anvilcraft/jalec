@@ -12,7 +12,7 @@ public class StandardConstructorAlecExceptionConstructionStrategy<E extends IAle
     public E constructAlecException(String message, Throwable cause, Class<E> alecExceptionClass) {
         try {
             Constructor<E> constructor
-                = alecExceptionClass.getConstructor(String.class, Throwable.class);
+                = alecExceptionClass.getDeclaredConstructor(String.class, Throwable.class);
 
             constructor.setAccessible(true);
 

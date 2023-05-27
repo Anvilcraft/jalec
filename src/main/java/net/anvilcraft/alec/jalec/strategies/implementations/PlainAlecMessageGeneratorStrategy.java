@@ -13,6 +13,9 @@ public class PlainAlecMessageGeneratorStrategy implements IAlecMessageGeneratorS
             }
         }
 
+        if (sb.length() == 0)
+            return null;
+
         return sb.toString();
     }
 }
